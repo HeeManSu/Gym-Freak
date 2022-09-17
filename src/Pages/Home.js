@@ -9,19 +9,15 @@ const Home = () => {
   //They are in the Home because changes in them is reflected in the whole application like in Searched exercisess and exercises.
   const [bodyPart, setBodyPart] = useState('all');
   const [exercises, setExercises] = useState([]);
- 
+
   return (
     <Box>
       <HeroBanner />
       <SearchExercises
-        setExercises={setExercises}
-        bodyPart={bodyPart}
-        setBodyPart={setBodyPart}
+        setExercises={setExercises} bodyPart={bodyPart} setBodyPart={setBodyPart}
       />
       <Exercises
-      setExercises={setExercises}
-      bodyPart={bodyPart}
-      exercises={exercises}
+        setExercises={setExercises} exercises={exercises} bodyPart={bodyPart}
       />
     </Box>
   )
