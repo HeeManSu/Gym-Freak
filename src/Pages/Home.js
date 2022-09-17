@@ -6,8 +6,10 @@ import HeroBanner from '../Components/HeroBanner'
 import SearchExercises from '../Components/SearchExercises'
 
 const Home = () => {
+  //They are in the Home because changes in them is reflected in the whole application like in Searched exercisess and exercises.
   const [bodyPart, setBodyPart] = useState('all');
   const [exercises, setExercises] = useState([]);
+ 
   return (
     <Box>
       <HeroBanner />
@@ -17,9 +19,9 @@ const Home = () => {
         setBodyPart={setBodyPart}
       />
       <Exercises
-        setExercises={setExercises}
-        exercises={exercises}
-        bodyPart={setBodyPart}
+      setExercises={setExercises}
+      bodyPart={bodyPart}
+      exercises={exercises}
       />
     </Box>
   )
